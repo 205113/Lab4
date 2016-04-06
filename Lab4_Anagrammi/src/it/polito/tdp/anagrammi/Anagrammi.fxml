@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.anagrammi.AnagrammiController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="it.polito.tdp.anagrammi.AnagrammiController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="parola" prefHeight="25.0" prefWidth="41.0" />
+                  <Button fx:id="calcola" mnemonicParsing="false" onAction="#Anagramma" text="Calcola" />
+               </children>
+            </HBox>
+            <TextArea fx:id="risultato" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="reset" mnemonicParsing="false" onAction="#cancella" text="Reset" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>

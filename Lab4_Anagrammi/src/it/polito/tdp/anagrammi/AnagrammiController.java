@@ -7,8 +7,8 @@ import it.polito.tdp.modelli.AnagrammaModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.text.TextFlow;
 
 public class AnagrammiController {
 	private AnagrammaModel model;
@@ -25,7 +25,7 @@ public class AnagrammiController {
     private Button calcola;
 
     @FXML
-    private TextFlow risultato;
+    private TextArea risultato;
 
     @FXML
     private Button reset;
@@ -35,17 +35,17 @@ public class AnagrammiController {
 
     }
 
+    
     @FXML
     void cancella(ActionEvent event) {
-
+    	parola.clear();
+    	risultato.clear();
     }
 
     	
     	public void setModel(AnagrammaModel a){
     		this.model=a;
     	}
-    		
-    	
     @FXML
     void initialize() {
         assert parola != null : "fx:id=\"parola\" was not injected: check your FXML file 'Anagrammi.fxml'.";
