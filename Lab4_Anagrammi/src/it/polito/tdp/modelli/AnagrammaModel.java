@@ -29,7 +29,11 @@ public class AnagrammaModel {
 		 }
 
 		 }
-	 
+	 public List<Parola>esistenti(List<String>anagrammi){
+		 AnagrammaModelDAO a= new AnagrammaModelDAO();
+		 List<Parola> parole=a.esistenti(anagrammi);
+		 return parole;
+	 }
 	/*public static void main(String[]args){
 		AnagrammaModel m= new AnagrammaModel();
 		List<String> s=m.permuta("ciao");
